@@ -1,7 +1,18 @@
+@import './_settings';
+
 html,
 body {
   padding: 0;
   margin: 0;
+  background-color: $backgroundBlue;
+  background-image: url('../public/background-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include desktop() {
+    background-image: url('../public/background-desktop.svg');
+    background-position: 0 toRem(-350);
+  }
 }
 
 a {

@@ -1,0 +1,21 @@
+@import '@/styles/__settings.scss';
+
+.button {
+  background-color: $blue;
+  width: 100%;
+  display: flex;
+  @include center();
+  color: $white;
+  font-weight: 900;
+  font-size: toRem(15);
+  line-height: toRem(20);
+  padding: toRem(15);
+  border: none;
+  border-radius: toRem(11);
+  box-shadow: toRem(0) toRem(20) toRem(20) rgba(56, 42, 225, 0.190291);
+
+  &:hover {
+    cursor: pointer;
+    background-color: $hoverButton;
+  }
+}

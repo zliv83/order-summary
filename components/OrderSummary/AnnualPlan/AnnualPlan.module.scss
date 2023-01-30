@@ -1,0 +1,78 @@
+@import '@/styles/__settings.scss';
+
+@mixin font() {
+  font-size: toRem(14);
+  line-height: toRem(19);
+
+  @include desktop() {
+    font-size: toRem(16);
+    line-height: toRem(21);
+  }
+}
+
+.plan {
+  background-color: $offWhite;
+  border-radius: toRem(11);
+  padding: toRem(16);
+  width: 100%;
+
+  @include desktop() {
+    padding: toRem(25);
+  }
+
+  .contents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .avatar {
+      display: flex;
+      @include center();
+      width: toRem(48);
+      height: toRem(48);
+      border-radius: 50%;
+      background-color: $avatarBlue;
+      background-image: url('../../../public/icon-music.svg');
+    }
+
+    .planDetails {
+      display: flex;
+      flex-direction: column;
+      margin-left: toRem(20);
+      gap: toRem(3);
+      align-items: center;
+
+      .planName {
+        font-weight: 900;
+        @include font();
+      }
+
+      .planPrice {
+        font-weight: 500;
+        @include font();
+        color: $lightBlue;
+      }
+    }
+
+    .change {
+      margin-left: toRem(30);
+      color: $blue;
+      text-decoration: underline;
+      font-weight: 700;
+      font-size: toRem(13);
+      line-height: toRem(17);
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: $hoverButton;
+      }
+
+      @include desktop() {
+        margin-left: toRem(80);
+        font-size: toRem(14);
+        line-height: toRem(19);
+      }
+    }
+  }
+}

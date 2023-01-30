@@ -1,9 +1,10 @@
+/* eslint-disable camelcase */
 import Head from 'next/head';
-import { Montserrat } from '@next/font/google';
+import { Red_Hat_Display } from '@next/font/google';
 
 import '@/styles/globals.scss';
 
-const mont = Montserrat({ subsets: ['latin'] });
+const mont = Red_Hat_Display({ subsets: ['latin'] });
 
 export default function App({ Component, pageProps }) {
   return (

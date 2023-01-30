@@ -1,4 +1,11 @@
 @import '@/styles/__settings.scss';
 
 .page {
+  display: flex;
+  @include center();
+  margin-top: toRem(71);
+
+  @include desktop() {
+    margin-top: toRem(102);
+  }
 }
